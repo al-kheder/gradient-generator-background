@@ -1,0 +1,42 @@
+.app {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+div input {
+  width: 100px;
+  height: 70px;
+  margin: 50px;
+}
+#dropdown {
+  width: 100px;
+  height: 30px;
+}
+.cssCode {
+  background: #fff;
+  height: 4vh;
+  padding: 20px;
+  margin: 5px;
+  font-size: 2em;
+  font-weight: 500;
+  border-radius: 8px;
+}
+.btn-random {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-random:hover {
+  transform: scale(1.05);
+}
+.copybutton {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.copybutton:hover {
+  transform: scale(0.9);
+}
