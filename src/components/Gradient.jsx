@@ -1,8 +1,8 @@
+
 import React, { useState, useEffect } from "react";
 import randomcolor from "randomcolor";
 import { FaRegCopy } from "react-icons/fa6";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-
 import "../App.css";
 
 const Gradient = () => {
@@ -26,7 +26,10 @@ const Gradient = () => {
     setColor1(randomcolor());
     setColor2(randomcolor());
   };
-  const handleCopy = () => {alert("CSS code copied to clipboard!");};
+  const handleCopy = () => {
+    alert("CSS code copied to clipboard!");
+  };
+  const directions = ["to right", "to left", "to top","to bottom"];
   return (
     <div>
       <h1>Create your own gradient:</h1>
@@ -48,18 +51,11 @@ const Gradient = () => {
             Generate Random gradient!
           </button>
           <select id="dropdown" value={direction} onChange={handleSelectChange}>
-            <option value="to right">to right</option>
-            <option value="to left">to left</option>
-            <option value="to top">to top</option>
-            <option value="to bottom">to bottom</option>
-            <option value="to top left">to top left</option>
-            <option value="to top right">to top right</option>
-            <option value="to bottom left">to bottom left</option>
-            <option value="to bottom right">to bottom right</option>
-            <option value="45deg">45deg</option>
-            <option value="90deg">90deg</option>
-            <option value="120deg">120deg</option>
-            <option value="180deg">180deg</option>
+            {directions.map((dir) => (
+              <option key={dir} value={dir}>
+                {dir}
+              </option>
+            ))}
           </select>
         </div>
       </div>
@@ -69,7 +65,6 @@ const Gradient = () => {
           <FaRegCopy className="copybutton" />
         </CopyToClipboard>
       </div>
-
     </div>
   );
 };
